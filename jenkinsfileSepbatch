@@ -29,11 +29,11 @@ stage('ExecuteSonarQubeReport')
 {
 sh "${mavenHome}/bin/mvn sonar:sonar"
 }
-stage('UploadArtifactIntoRepo')
+/*stage('UploadArtifactIntoRepo')
 {
 sh "${mavenHome}/bin/mvn deploy"
 
-}
+}*/
 /*stage('DeployAppIntoTomcatServer')
 sshagent(['05ee4355-8e52-4d4f-9677-6c5c2937617d'])
  {
