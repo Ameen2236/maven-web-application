@@ -34,11 +34,11 @@ stage('UploadArtifactIntoRepo')
 sh "${mavenHome}/bin/mvn deploy"
 
 }
-stage('DeployAppIntoTomcatServer')
+/*stage('DeployAppIntoTomcatServer')
 sshagent(['05ee4355-8e52-4d4f-9677-6c5c2937617d'])
  {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.1.110.237:/opt/apache-tomcat-9.0.54/webapps/"
-}
+}*/
 /*stage('SendEmailNotification')
 {
 mail bcc: '', body: '''Build over..
