@@ -37,7 +37,7 @@ sh "${mavenHome}/bin/mvn deploy"
 stage('DeployAppIntoTomcatServer')
 sshagent(['05ee4355-8e52-4d4f-9677-6c5c2937617d'])
  {
-    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.2.82.246:/opt/apache-tomcat-9.0.54/webapps/"
+    sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@65.2.161.251:8080:/opt/apache-tomcat-9.0.54/webapps/"
 }
 /*stage('SendEmailNotification')
 {
